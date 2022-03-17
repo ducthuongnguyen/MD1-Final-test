@@ -12,28 +12,27 @@
 <!--Nguyên âm là các ký tự: a, o, e, u, i-->
 <body>
 <script>
-    function findVowel(str) {
+    function findVowel(arr) {
         let count = 0;
+        let str = arr.join();
+        console.log(str)
         let vowels = ['u', 'e', 'o', 'a', 'i'];
-        if (str.length == 0) {
-            return 'Blank string. Please reenter the new string!'
-        } else {
-            for (let i = 0; i < str.length; i++) {
-                for (let j = 0; j < vowels.length; j++) {
-                    if (str.charAt(i).toLowerCase() == vowels[j]) {
-                        count++;
-                    }
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < vowels.length; j++) {
+                if (str.charAt(i).toLowerCase() == vowels[j]) {
+                    count++;
                 }
             }
-            if (count === 0) {
-                return false;
-            } else
-                return 'There are ' + count + ' vowels in the string';
         }
+        if (count === 0) {
+            return false;
+        } else
+            return 'There are ' + count + ' vowels in the string';
+
     }
 
-    let str = prompt('Enter a string by English:');
-    alert(findVowel(str));
+    let array = ['ue oai','hello',68];
+    alert(findVowel(array));
 
 </script>
 </body>
