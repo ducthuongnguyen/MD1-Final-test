@@ -14,12 +14,15 @@
 <script>
     function findVowel(str) {
         let count = 0;
+        let vowels = ['u', 'e', 'o', 'a', 'i'];
         if (str.length == 0) {
             return 'Blank string. Please reenter the new string!'
         } else {
             for (let i = 0; i < str.length; i++) {
-                if (str[i] == 'u' || str[i] == 'e' || str[i] == 'o' || str[i] == 'a' || str[i] == 'i') {
-                    count++
+                for (let j = 0; j < vowels.length; j++) {
+                    if (str.charAt(i).toLowerCase() == vowels[j]) {
+                        count++;
+                    }
                 }
             }
             if (count === 0) {
@@ -31,7 +34,6 @@
 
     let str = prompt('Enter a string by English:');
     alert(findVowel(str));
-
 
 </script>
 </body>
