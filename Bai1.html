@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Solve first degree equation</title>
+</head>
+<!--Câu 1:  Xây dựng hàm giải phương trình bậc nhất, biết tham số là các hệ số nguyên a, b.
+ Hàm trả về nghiệm của phương trình theo tham số đã cho.-->
+<!--Viết chương trình sử dụng hàm vừa xây dựng để giải phương trình bậc nhất với hệ số a = 5; b = 8.-->
+<body>
+<script>
+    function solveEquation(a, b) {
+        let x = -b / a;
+        if (a == 0 && b == 0) {
+            x = 'The equation has infinitely many solutions.';
+        } else if (a == 0 && b != 0) {
+            x = 'The equation has no solution.';
+        } else x = 'The equation has only solution is ' + x;
+        alert(x);
+    }
+
+    solveEquation(0, 0)
+</script>
+</body>
+</html>

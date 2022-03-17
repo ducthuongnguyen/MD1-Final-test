@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create class</title>
+</head>
+<!--Câu 4:-->
+<!--1/ Xây dựng lớp Animal với các:-->
+<!--Thuộc tính: tên và cân nặng-->
+<!--Phương thức:-->
+<!--•	setName(): để thiết đặt giá trị mới cho thuộc tính tên theo giá trị của tham số truyền vào.-->
+<!--•	setWeight(): để thiết đặt giá trị mới cho thuộc tính cân nặng theo giá trị của tham số truyền vào.-->
+<!--•	getName(): trả về tên của animal-->
+<!--•	getWeight(): trả về cân nặng của animal-->
+<!--•	toString() trả về chuỗi chứa thông tin của tên và cân nặng-->
+<!--2/ Sử dụng lớp Animal vừa định nghĩa để xây dựng một chương trình JavaScript với kịch bản như sau:-->
+<!--•	Tạo đối tượng  có tên là objAnimal1-->
+<!--•	Thiết đặt tên cho đối tượng objAnimal1 là “Elephant”-->
+<!--•	Thiết đặt cân nặng cho đối tượng objAnimal1 là 45.6-->
+<!--•	Gọi phương thức toString()-->
+<!--•	Tạo đối tượng có tên là objAnimal2 sử dụng phương thức khởi tạo có 2 tham số là tên và cân nặng-->
+<!--•	Đổi tên cho đối tượng objAnimal2 thành “Mouse”-->
+<body>
+<script>
+    class Animal {
+        constructor(name, weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        toString() {
+            return 'Name is ' + this.getName() + ' weight is ' + this.getWeight();
+        }
+    }
+
+    let objAnimal1 = new Animal();
+    objAnimal1.setName('Elephant');
+    objAnimal1.setWeight(45.6);
+    document.write('Animal 1: ' + objAnimal1.toString() + '<br/>');
+
+    let objAnimal2 = new Animal('Cat', 10);
+    document.write('Animal 2: ' + objAnimal2.toString() + '<br/>');
+    objAnimal2.setName('Mouse');
+    document.write('The info of animal 2 after rename: ' + objAnimal2.toString());
+
+</script>
+</body>
+</html>
